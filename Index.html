@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>☠️ MT BANNED PANEL ☠️</title>
+  <!-- Hubungkan ke CSS -->
+  <link rel="stylesheet" href="king.css">
+</head>
+<body>
+  <!-- Judul Utama -->
+  <h1 id="title">LOGIN PANEL</h1>
+
+  <!-- Kotak Login -->
+  <div id="login-box">
+    <input type="text" id="username" placeholder="Username"><br>
+    <input type="password" id="password" placeholder="Password"><br>
+    <button onclick="loginToPanel()">Masuk</button>
+  </div>
+
+  <!-- Panel MT (muncul setelah login berhasil) -->
+  <div id="mt-section" style="display:none;">
+    <h2>Pilih MT</h2>
+
+    <!-- Dropdown untuk memilih V1 sampai V4 -->
+    <select id="mt-select">
+      <option value="">-- Pilih MT --</option>
+      <option value="v1">MT V1</option>
+      <option value="v2">MT V2</option>
+      <option value="v3">MT V3</option>
+      <option value="v4">MT V4</option>
+    </select><br>
+
+    <!-- Tombol untuk menyalin teks -->
+    <button onclick="copySelectedText()">📋 SALIN</button>
+
+    <!-- Kontrol Musik -->
+    <h2>🎶 Musik</h2>
+    <button onclick="playStecustecuMusic()">▶ Putar stecustecu</button>
+    <button onclick="stopStecustecuMusic()">⏹ Hentikan</button>
+  </div>
+
+  <!-- Audio Player untuk Musik (terhubung ke stecustecu.mp3) -->
+  <audio id="stecustecu-music">
+    <source src="stecustecu.mp3" type="audio/mpeg">
+    Browser kamu tidak mendukung pemutar audio.
+  </audio>
+
+  <!-- Toast Notifikasi -->
+  <div id="toast"></div>
+
+  <!-- Hubungkan ke JavaScript -->
+  <script src="king.js"></script>
+</body>
+</html>
